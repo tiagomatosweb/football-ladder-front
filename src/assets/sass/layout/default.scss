@@ -1,0 +1,8 @@
+.app {
+    width: calc(100% - 60px);
+    padding: 30px;
+
+    @include media-breakpoint-up(md) {
+        max-width: 600px;
+    }
+}
