@@ -53,6 +53,14 @@ export default {
         this.getLadder();
     },
 
+    mounted() {
+        const vm = this;
+        const channel = window.pusher.subscribe('ladder');
+        channel.bind('App\\Acme\\Events\\MatchUpdatedEvent', (data) => {
+            vm.ladder = data.ladder;
+        });
+    },
+
     data() {
         return {
             competitions: [],

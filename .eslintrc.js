@@ -52,5 +52,8 @@ module.exports = {
         'no-trailing-spaces': ['error', { 'skipBlankLines': true }],
         'no-underscore-dangle': ['error', { 'allowAfterThis': true }],
         'no-unused-expressions': ['error', { 'allowTernary': true }]
+    },
+    globals: {
+        'Pusher': true,
     }
 }
